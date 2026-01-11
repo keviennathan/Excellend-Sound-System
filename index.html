@@ -147,6 +147,32 @@ section h2{
     line-height:1.7;
 }
 
+/* UPLOAD GAMBAR */
+.upload-box{
+    background:#fff;
+    max-width:600px;
+    margin:0 auto;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+    text-align:center;
+}
+
+.upload-box h3{
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.upload-preview{
+    margin-top:25px;
+}
+
+.upload-preview img{
+    max-width:100%;
+    border-radius:18px;
+    display:none;
+}
+
 /* FOOTER */
 footer{
     background:#0f2027;
@@ -178,31 +204,47 @@ footer{
             <p class="price">Rp 800.000</p>
             <ul>
                 <li>✔ 2 Speaker Aktif</li>
-                <li>✔ 1 Subwofeer</li> 
-                <li>✔ 1 Mixer Profesional </li>
+                <li>✔ 1 Subwoofer</li>
+                <li>✔ 1 Mixer Profesional</li>
                 <li>✔ 4 Mic Wireless</li>
-                <li>✔ Acara Kecil & Indoor</li>
+                <li>✔ Teknisi Standby</li>
             </ul>
             <a href="#" class="btn-order"
                onclick="pesanWA('Paket Basic','800.000')">Pesan Sekarang</a>
         </div>
 
         <div class="card">
-            <span class="badge">spesial</span>
-            <h3>Paket Standard</h3>
+            <span class="badge">Spesial</span>
+            <h3>Paket standar</h3>
             <p class="price">Rp 1.200.000</p>
             <ul>
                 <li>✔ 4 Speaker Aktif</li>
-                <li>✔ 2 Subwofeer</li>
+                <li>✔ 2 Subwoofer</li>
                 <li>✔ Mixer Profesional</li>
-                <li>✔8 Mic Wireless</li>
+                <li>✔ 8 Mic Wireless</li>
                 <li>✔ Teknisi Standby</li>
             </ul>
             <a href="#" class="btn-order"
-               onclick="pesanWA('Paket Standard','1.000.000')">Pesan Sekarang</a>
+               onclick="pesanWA('Paket Standard','1.200.000')">Pesan Sekarang</a>
         </div>
 
+    </div>
+</section>
 
+<section>
+    <h2>Upload Referensi Acara</h2>
+
+    <div class="upload-box">
+        <h3>Upload Foto Lokasi / Acara</h3>
+        <p style="opacity:.8">
+            Upload foto untuk membantu kami menyiapkan sound system terbaik
+        </p>
+
+        <input type="file" accept="image/*" onchange="previewImage(event)">
+
+        <div class="upload-preview">
+            <img id="previewImg">
+        </div>
     </div>
 </section>
 
@@ -220,10 +262,9 @@ footer{
     © 2026 Excellent Sound System | All Rights Reserved
 </footer>
 
-<!-- WHATSAPP SCRIPT -->
 <script>
 function pesanWA(paket, harga) {
-    const nomorWA = "6285331255679"; // GANTI nomor kamu
+    const nomorWA = "6285331255679";
     const pesan =
         `Halo Excellent Sound System,%0A%0A` +
         `Saya ingin memesan *${paket}*%0A` +
@@ -232,6 +273,12 @@ function pesanWA(paket, harga) {
         `Terima kasih.`;
 
     window.open(`https://wa.me/${nomorWA}?text=${pesan}`, "_blank");
+}
+
+function previewImage(event){
+    const img = document.getElementById("previewImg");
+    img.src = URL.createObjectURL(event.target.files[0]);
+    img.style.display = "block";
 }
 </script>
 
