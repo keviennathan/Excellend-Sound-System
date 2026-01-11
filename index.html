@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Excellent Sound System | Sewa Sound Profesional</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#fff;
+    padding:90px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:44px;
+    margin-bottom:15px;
+    letter-spacing:1px;
+}
+
+header p{
+    font-size:18px;
+    opacity:.9;
+}
+
+.btn-main{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 36px;
+    background:#25d366;
+    color:#fff;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-main:hover{
+    background:#1ebe5d;
+    transform:scale(1.05);
+}
+
+/* SECTION */
+section{
+    padding:80px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+section h2{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:60px;
+}
+
+/* PACKAGES */
+.packages{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:#fff;
+    border-radius:25px;
+    padding:35px 30px;
+    text-align:center;
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+    transition:.4s;
+    position:relative;
+}
+
+.card:hover{
+    transform:translateY(-15px);
+}
+
+.badge{
+    position:absolute;
+    top:-15px;
+    right:20px;
+    background:#ff9800;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.card h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:32px;
+    color:#2c5364;
+    margin:18px 0;
+    font-weight:bold;
+}
+
+.card ul{
+    list-style:none;
+    margin:25px 0;
+}
+
+.card ul li{
+    margin:10px 0;
+    font-size:15px;
+}
+
+.btn-order{
+    display:inline-block;
+    margin-top:20px;
+    padding:13px 30px;
+    background:#2c5364;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-order:hover{
+    background:#0f2027;
+}
+
+/* ABOUT */
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* FOOTER */
+footer{
+    background:#0f2027;
+    color:#fff;
+    text-align:center;
+    padding:35px;
+    margin-top:60px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Excellent Sound System</h1>
+    <p>Penyewaan Sound System Profesional untuk Semua Jenis Acara</p>
+    <a href="https://wa.me/6285331255679" class="btn-main">📞 Hubungi via WhatsApp</a>
+</header>
+
+<section>
+    <h2>Paket Sound System</h2>
+
+    <div class="packages">
+
+        <div class="card">
+            <span class="badge">Favorit</span>
+            <h3>Paket Basic</h3>
+            <p class="price">Rp 800.000</p>
+            <ul>
+                <li>✔ 2 Speaker Aktif</li>
+                <li>✔ 1 Subwofeer</li> 
+                <li>✔ 1 Mixer Profesional </li>
+                <li>✔ 4 Mic Wireless</li>
+                <li>✔ Acara Kecil & Indoor</li>
+            </ul>
+            <a href="#" class="btn-order"
+               onclick="pesanWA('Paket Basic','800.000')">Pesan Sekarang</a>
+        </div>
+
+        <div class="card">
+            <span class="badge">spesial</span>
+            <h3>Paket Standard</h3>
+            <p class="price">Rp 1.200.000</p>
+            <ul>
+                <li>✔ 4 Speaker Aktif</li>
+                <li>✔ 2 Subwofeer</li>
+                <li>✔ Mixer Profesional</li>
+                <li>✔8 Mic Wireless</li>
+                <li>✔ Teknisi Standby</li>
+            </ul>
+            <a href="#" class="btn-order"
+               onclick="pesanWA('Paket Standard','1.000.000')">Pesan Sekarang</a>
+        </div>
+
+
+    </div>
+</section>
+
+<section>
+    <h2>Tentang Kami</h2>
+    <p class="about">
+        Excellent Sound System menyediakan layanan penyewaan sound system
+        berkualitas tinggi untuk acara pernikahan, seminar, konser, ulang tahun,
+        dan berbagai event lainnya. Kami mengutamakan kualitas suara, peralatan
+        terbaik, serta pelayanan profesional dan tepat waktu.
+    </p>
+</section>
+
+<footer>
+    © 2026 Excellent Sound System | All Rights Reserved
+</footer>
+
+<!-- WHATSAPP SCRIPT -->
+<script>
+function pesanWA(paket, harga) {
+    const nomorWA = "6285331255679"; // GANTI nomor kamu
+    const pesan =
+        `Halo Excellent Sound System,%0A%0A` +
+        `Saya ingin memesan *${paket}*%0A` +
+        `Harga: *Rp ${harga}*%0A` +
+        `Mohon info ketersediaan dan jadwal.%0A%0A` +
+        `Terima kasih.`;
+
+    window.open(`https://wa.me/${nomorWA}?text=${pesan}`, "_blank");
+}
+</script>
+
+</body>
+</html>
